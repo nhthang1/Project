@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             mc:Ignorable="d"
+             x:Class="QLCT.Views.ExpenseChart">
+    <Grid RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label Text="Chi tiêu theo tháng" Grid.Row="0" HorizontalOptions="Center" FontSize="Large"/>
+            <microcharts:ChartView x:Name="Chart1" Grid.Row="1"></microcharts:ChartView>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label Text="Các loại chi tiêu" Grid.Row="0" HorizontalOptions="Center" FontSize="Large"></Label>
+            <microcharts:ChartView x:Name="Chart2" Grid.Row="1"></microcharts:ChartView>
+        </Grid>
+        
+    </Grid>
+</ContentPage>
